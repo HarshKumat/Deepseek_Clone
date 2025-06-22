@@ -14,7 +14,7 @@ const PromptBox = ({setIsloading, isLoading}) => {
         break-words bg-transparent'
         rows={2}
         placeholder='Message Deepseek' required
-        onChange={()=> setPrompt(e.target.value)} value={prompt}
+        onChange={(e)=> setPrompt(e.target.value)} value={prompt}
         />
         <div className='flex items-center justify-between text-sm'>
             <div className='flex items-center gap-2'>
