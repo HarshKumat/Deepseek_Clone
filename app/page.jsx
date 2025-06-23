@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useState } from "react";
 import Sidebar from "./components/sidebar";
 import PromptBox from "./components/PromptBox";
+import Messages from "./components/Messages";
 
 export default function Home() {
 
@@ -31,7 +32,11 @@ export default function Home() {
             <p className="text-sm mt-2"> How can I help you today?</p>
             </>
           ):
-            (<div></div> )
+            (
+            <div>
+              <Messages role='user' content='What is next js'/>
+            </div> 
+            )
         }
         <PromptBox isLoading={isLoading} setisLoading={setisLoading}/>
         <p className="text-xs absolute bottom-1 text-gray-500">AI-generated, for reference only</p>
