@@ -2,9 +2,9 @@
 import { assets } from "@/assets/assets";
 import Image from "next/image";
 import { useState } from "react";
-import Sidebar from "./components/sidebar";
-import PromptBox from "./components/PromptBox";
-import Messages from "./components/Messages";
+import Sidebar from "../components/sidebar";
+import PromptBox from "../components/PromptBox";
+import Messages from "../components/Messages";
 
 export default function Home() {
 
