@@ -20,11 +20,14 @@ export async function POST(req){
     const {data,type} =wh.verify(body,svixHeaders)
 
     //Prepare the UserDATA tp be saved in the DB
-
+    
+    const email = Array.isArray(data.email_addresses) && data.email_addresses.length > 0
+  ? data.email_addresses[0].email_address
+  : null;
 
     const UserData = {
         _id: data.id,
-        email: email_addresses[0].email_address,
+        email: email,
         name: `${data.first_name} ${data.last_name}`,
         image: data.image_url,
     };
